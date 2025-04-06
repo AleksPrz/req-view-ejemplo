@@ -1,0 +1,774 @@
+{
+  "id": "SRS",
+  "guid": "3165247e-afc0-4539-9520-556dbe55b68b",
+  "name": "Software Requirements Specification",
+  "lastId": 111,
+  "createdOn": "2025-04-06T18:29:33.220Z",
+  "createdBy": {
+    "name": "Alexis Perez",
+    "email": "al064601@uacam.mx",
+    "company": ""
+  },
+  "lastChangedOn": "2025-04-06T19:29:54.000Z",
+  "lastChangedBy": {
+    "name": "Alexis Perez",
+    "email": "al064601@uacam.mx",
+    "company": ""
+  },
+  "helpRef": "ISO/IEC/IEEE 29148:2018",
+  "data": [
+    {
+      "id": "1",
+      "guid": "3f5b1679-d18d-471a-b529-46d8d298e2ab",
+      "heading": "Introducción",
+      "helpRef": "8.5",
+      "type": "SEC",
+      "children": [
+        {
+          "id": "2",
+          "guid": "655f99c0-b55d-4bb1-8e36-1b16bf5285c7",
+          "heading": "Propósito",
+          "helpRef": "9.6.2",
+          "type": "SEC"
+        },
+        {
+          "id": "32",
+          "guid": "507c45f9-6737-458d-80ee-2634559d9413",
+          "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">Este documento tiene como propósito describir el funcionamiento general del \"Sistema de historial clínico digital\". Está dirigido al equipo de desarrollo, a la Facultad de Odontología y al usuario final, proporcionando información detallada sobre sus características y requisitos</span></p>",
+          "type": "INF"
+        },
+        {
+          "id": "3",
+          "guid": "2336bf35-dd4a-4249-9e06-d1131a28c957",
+          "heading": "Ámbito del Sistema",
+          "helpRef": "9.6.3",
+          "type": "SEC",
+          "children": [
+            {
+              "id": "33",
+              "guid": "8713d587-734b-4669-a694-209defe84383",
+              "heading": "Nombre del Sistema",
+              "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">Sistema de historial clínico digital</span></p>",
+              "type": "INF"
+            },
+            {
+              "id": "34",
+              "guid": "3bfed003-0a2e-4285-9e3f-940976510737",
+              "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">El sistema tiene como objetivo principal digitalizar y centralizar la información clínica, reduciendo errores comunes asociados al manejo físico de documentos como duplicación de historias, inconsistencia en nombres y pérdida de datos.</span></p>",
+              "type": "INF"
+            }
+          ]
+        },
+        {
+          "id": "4",
+          "guid": "3bfa5923-dc09-45fa-9d90-80d67247a195",
+          "heading": "Definiciones, Acrónimos y Abreviaturas",
+          "helpRef": "9.6.4",
+          "type": "SEC",
+          "children": [
+            {
+              "id": "36",
+              "guid": "81afd883-6edc-4f21-a382-47d05cd1de5f",
+              "heading": "BD",
+              "text": "<p>Base de datos</p>",
+              "type": "INF"
+            },
+            {
+              "id": "37",
+              "guid": "ba81a152-f2d7-46f4-b09c-f8be0c1fc2cc",
+              "heading": "Módulo",
+              "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">Procedimiento odontológico. El módulo puede verse como el tipo de tratamiento y la asignatura a la que corresponde.&nbsp;</span></p>",
+              "type": "INF"
+            },
+            {
+              "id": "38",
+              "guid": "cf15129a-da99-46bb-8331-f9c02a517eee",
+              "heading": "Odontograma",
+              "text": "<p>Es un esquema gráfico – o mapa de la boca – en el que el dentista puede localizar todas las piezas dentales del paciente y realizar anotaciones sobre cada una de ellas</p>",
+              "type": "INF"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "guid": "1a30dc23-8df8-438b-9da3-4d6647fcd7ce",
+      "heading": "Descripción General",
+      "helpRef": "9.6.10",
+      "type": "SEC",
+      "children": [
+        {
+          "id": "21",
+          "guid": "aaf3337d-d381-455a-9985-fb8b65bcf4e2",
+          "heading": "Perspectiva del producto",
+          "helpRef": "9.6.11",
+          "type": "SEC",
+          "children": [
+            {
+              "id": "39",
+              "guid": "bcce2b37-e37c-43a7-85f5-29127ac4a588",
+              "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">El producto final permite la gestión digital de las historias clínicas de los pacientes en las clínicas de la Facultad de Odontología de la Universidad Autónoma de Campeche. Esto evitará que se tengan que gestionar físicamente y disminuirá los tiempos de trabajo</span></p>",
+              "type": "INF"
+            }
+          ]
+        },
+        {
+          "id": "22",
+          "guid": "3b5aa584-87db-4ecf-b253-3eb2b8e7d675",
+          "heading": "Funciones",
+          "helpRef": "9.6.12",
+          "type": "SEC",
+          "children": [
+            {
+              "id": "40",
+              "guid": "0c9ff581-07d4-4ff0-8ae6-c014d4b9830e",
+              "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">Gestión de las historias clínicas de los pacientes en las clínicas. Esto incluye el registro de la información personal y médica del paciente y los procedimientos que se le vayan realizando.</span></p>",
+              "type": "INF"
+            },
+            {
+              "id": "41",
+              "guid": "4546a238-aae2-4d63-8eed-62dcd1e47dd6",
+              "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">La evaluación de los procedimientos por parte de los docentes.</span></p>",
+              "type": "INF"
+            },
+            {
+              "id": "42",
+              "guid": "4b5903ac-6728-4d4e-a59e-6bd1b3d4c2c6",
+              "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">El pago por el paciente de los procedimientos que este se haya realizado.</span></p>",
+              "type": "INF"
+            }
+          ]
+        },
+        {
+          "id": "23",
+          "guid": "ede48760-fe4e-4fd9-8dbf-145e1b3b3e0a",
+          "heading": "Usuarios",
+          "helpRef": "9.6.13",
+          "type": "SEC",
+          "children": [
+            {
+              "id": "43",
+              "guid": "95190f9f-39b9-4709-9d06-91f9a329ef21",
+              "heading": "Docente",
+              "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">En el ámbito académico, es quien supervisa que los alumnos estén llevando a cabo las prácticas de los diversos módulos con las mejores prácticas; en el sistema, es quien puede revisar y gestionar la información (historiales clínicos, módulos) que los alumnos suban al mismo, para aprobar o modificarla.</span></p>",
+              "type": "INF"
+            },
+            {
+              "id": "44",
+              "guid": "9ef72417-5056-401e-ba40-76747060f452",
+              "heading": "Alumno",
+              "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">Es el estudiante que realiza las prácticas de odontología; puede subir información importante al sistema, como la información personal de los pacientes, los historiales clínicos de los mismos, los módulos realizados, etc.</span></p>",
+              "type": "INF"
+            }
+          ]
+        },
+        {
+          "id": "24",
+          "guid": "0c6ee020-673b-47c6-b0dd-417eab6b996d",
+          "heading": "Restricciones",
+          "helpRef": "9.6.14",
+          "type": "SEC",
+          "children": [
+            {
+              "id": "45",
+              "guid": "b2e303ca-7893-431b-bff1-386e5adb1bd8",
+              "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">El usuario no podrá registrar al paciente más de una sola vez. Cuando se quiera hacer modificaciones a la historia clínica de un paciente determinado, se debe poder recuperar la existente (si la hay) y hacer las modificaciones en ella.&nbsp;</span></p>",
+              "type": "INF"
+            },
+            {
+              "id": "47",
+              "guid": "63e0f887-3ea0-4840-9565-c34d4130c12d",
+              "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">No se permite que dos usuarios estén modificando la misma historia clínica al mismo tiempo. Si un estudiante tiene abierta una historia clínica para editarla, el sistema debe poder detectarlo y solo dar permisos de lectura a otros usuarios que quieran ver esa misma historia clínica al mismo tiempo.&nbsp;</span></p>",
+              "type": "INF"
+            },
+            {
+              "id": "48",
+              "guid": "e6e16a93-3750-47a2-a7d5-a98570bbff9f",
+              "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">Solo se puede editar una historia clínica en horario laboral. Deben haber otras restricciones para poder hacer ediciones, para que un alumno no pueda modificar las historias con fines malintencionados.&nbsp;</span></p>",
+              "type": "INF"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "guid": "fc40d564-5320-42d1-a1a6-d084fd7d0bab",
+      "heading": "Requerimientos Específicos",
+      "helpRef": "9.6.19",
+      "type": "SEC",
+      "children": [
+        {
+          "id": "49",
+          "guid": "d5f8c444-1b7f-4962-a32a-f054bfd989d6",
+          "text": "<p dir=\"ltr\" style=\"text-align: justify;\"><span style=\"text-decoration:none;vertical-align:baseline;\">En esta sección se tienen con más detalle los requerimientos específicos del sistema a</span></p><p dir=\"ltr\" style=\"text-align: justify;\"><span style=\"text-decoration:none;vertical-align:baseline;\">desarrollar.</span></p>",
+          "type": "INF"
+        },
+        {
+          "id": "50",
+          "guid": "6c6b0734-0299-4163-a1d0-dd6736e35d9f",
+          "heading": "Interfaz",
+          "type": "SEC",
+          "children": [
+            {
+              "id": "54",
+              "guid": "b09e06a0-9788-4673-aaf0-eaa6428a75f4",
+              "heading": "Pantalla de inicio de sesión",
+              "text": "<p dir=\"ltr\" style=\"text-align: justify;\"><span style=\"text-decoration:none;vertical-align:baseline;\">El inicio de sesión se realiza con un correo registrado y la contraseña válida. Muestra un enlace por si el usuario olvidó su contraseña, enviando a su correo institucional un enlace para recuperar su contraseña, al igual que un apartado para cambiar la contraseña.</span></p>",
+              "type": "INT"
+            },
+            {
+              "id": "55",
+              "guid": "b6832889-af71-45aa-8a26-8006e33b0f5e",
+              "heading": "Pantalla de registro",
+              "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">Un administrador hará el registro con un correo electrónico institucional y una contraseña no menor a 6 caracteres.</span></p>",
+              "type": "INT"
+            },
+            {
+              "id": "56",
+              "guid": "bb165805-3de2-4144-8eab-85a6b8e3c6e4",
+              "heading": "Barra de navegación",
+              "text": "<p dir=\"ltr\" style=\"text-align: justify;\"><span style=\"text-decoration:none;vertical-align:baseline;\">Se desplegará en la parte superior de la pantalla a través de todas las subsiguientes interfaces. Contiene los enlaces a las distintas secciones de la aplicación.</span></p><p dir=\"ltr\" style=\"text-align: justify;\"><span style=\"text-decoration:none;vertical-align:baseline;\">Contendrá:</span></p>",
+              "type": "INT",
+              "children": [
+                {
+                  "id": "57",
+                  "guid": "d7905230-d28f-493d-b445-a697626c979b",
+                  "heading": "Inicio",
+                  "type": "INT"
+                },
+                {
+                  "id": "58",
+                  "guid": "feb7c5f3-1090-4f60-837b-cd5171aa5d09",
+                  "heading": "Registrar paciente",
+                  "type": "INT"
+                },
+                {
+                  "id": "59",
+                  "guid": "b1eb7e80-464b-402a-8d5e-2eadef8fbd70",
+                  "heading": "Realizar Módulos",
+                  "type": "INT"
+                },
+                {
+                  "id": "60",
+                  "guid": "03b1795c-eb2f-45d9-842e-d8e71976ff33",
+                  "heading": "Buscar paciente",
+                  "type": "INT"
+                },
+                {
+                  "id": "61",
+                  "guid": "def694bb-efc1-4370-b61b-6b30b314e219",
+                  "heading": "Buscar módulo realizado",
+                  "type": "INT"
+                }
+              ]
+            },
+            {
+              "id": "62",
+              "guid": "145f1ba3-906b-4972-819a-a9b07bc5f97f",
+              "heading": "Inicio",
+              "text": "<p dir=\"ltr\" style=\"text-align: justify;\"><span style=\"text-decoration:none;vertical-align:baseline;\">Es la primera pantalla que le aparece al usuario al iniciar sesión.</span></p>",
+              "type": "INT",
+              "children": [
+                {
+                  "id": "63",
+                  "guid": "af909e98-8659-4224-ba58-68e1a63c8596",
+                  "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">En el apartado de la izquierda cuenta con un &nbsp;menú que le permite al usuario navegar entre secciones del sistema web.</span></p>",
+                  "type": "INT"
+                },
+                {
+                  "id": "64",
+                  "guid": "56db4cdc-9d6a-4604-b707-a9032c836891",
+                  "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">El apartado central una breve descripción del sistema web y un video tutorial.</span></p>",
+                  "type": "INT"
+                }
+              ]
+            },
+            {
+              "id": "65",
+              "guid": "8f1d0855-7ea3-487b-9217-83c797418177",
+              "heading": "Registrar paciente",
+              "text": "<p dir=\"ltr\" style=\"text-align: justify;\"><span style=\"text-decoration:none;vertical-align:baseline;\">En este apartado se tendrá que entrevistar el paciente para registrarlo y armar su expediente virtual, en donde tendrá que contestar algunas preguntas de los siguientes apartados:</span></p>",
+              "type": "INT",
+              "children": [
+                {
+                  "id": "66",
+                  "guid": "64e54102-5ee6-425a-b7ab-dd8350e90171",
+                  "text": "<p dir=\"ltr\" style=\"text-align: justify;\"><span style=\"text-decoration:none;vertical-align:baseline;\">Datos básicos del paciente (nombre completo, CURP, sexo, edad, fecha de nacimiento, altura, peso, &nbsp;numero de telefono, correo, domicilio, CP, Contacto de emergencia).</span></p>",
+                  "type": "INT"
+                },
+                {
+                  "id": "67",
+                  "guid": "442fe950-da52-464c-8fcd-5cd4147eec92",
+                  "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">Datos médicos (tipo de sangre, alergias algún medicamento, cuenta con tuberculosis, dificultad al respirar, tos con sangre).</span></p>",
+                  "type": "INT"
+                },
+                {
+                  "id": "68",
+                  "guid": "28b28252-72f2-4af9-a5c1-b61973dc27da",
+                  "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">Información dental-oral (uso de hilo dental, cuenta con brackets, cepillo diario, dolor al cepillarse los dientes, heridas bucales, dentadura completa, úlceras bucales, última consulta dental, ultima radiografia dental,motivo de su visita)</span></p>",
+                  "type": "INT"
+                },
+                {
+                  "id": "69",
+                  "guid": "3ff78563-b0e2-4ae1-9e37-ca4dc8e672c8",
+                  "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">Información médica (médico de cabecera, celular, dirección, estado de salud, último examen físico, medicamentos recién tomados, uso de lentes de contacto, alergias, antecedentes cardiovasculares,hematológicos, autoinmunes o inmunológicos, respiratorios, oncologicos, &nbsp;gastroenteológicos, neurologicos, nefroulógicos).</span></p>",
+                  "type": "INT"
+                },
+                {
+                  "id": "70",
+                  "guid": "8b674540-44aa-43aa-a56f-2079a96a6086",
+                  "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">Antecedentes personales patológicos y no patológicos (enfermedades o alteraciones de su salud, número de integrantes de su familia, tipo de vivienda, número de habitantes, servicios que cuenta, fumador, ingiere bebidas alcohólicas, consume algún narcótico).</span></p>",
+                  "type": "INT"
+                },
+                {
+                  "id": "71",
+                  "guid": "8425273d-5ecf-4614-9e70-06267f6f12f2",
+                  "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">Evaluación Inicial (Se realizará anotaciones sobre las condiciones actuales de sus órganos dentales con un odontograma)</span></p>",
+                  "type": "INT"
+                },
+                {
+                  "id": "72",
+                  "guid": "f5d5b72e-0e0c-41db-8dbd-b572c38b8a83",
+                  "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">Carta de consentimiento (El paciente firmará y autorizará que se le practiquen técnicas y procedimientos dentales necesarios, el uso de fotografías y videos de su dentadura y bucales con los fines académicos prácticos).</span></p>",
+                  "type": "INT"
+                }
+              ]
+            },
+            {
+              "id": "73",
+              "guid": "8a80e753-62f4-47e1-9730-629ef9887303",
+              "heading": "Realizar módulo",
+              "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">En este apartado se abrirá un listado de todos los módulos disponibles para realizarle a un paciente determinado, en donde el usuario tendrá que buscar el paciente, elegir el módulo a realizar y llenar la información necesaria de cada módulo.</span></p>",
+              "type": "INT"
+            },
+            {
+              "id": "74",
+              "guid": "daa3b270-f357-4b8a-9266-e89393660050",
+              "heading": "Buscar paciente",
+              "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">En este apartado se buscará un paciente determinado para ver su información y su expediente médico en donde contiene todos los módulos que le han realizados con toda la información de este.</span></p>",
+              "type": "INT"
+            },
+            {
+              "id": "75",
+              "guid": "c5b11b21-0b66-4c77-985c-817a0fdfba85",
+              "heading": "Buscar módulo",
+              "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">Se podrá buscar un módulo para ser evaluado por profesores y verificar que el procedimiento se llevó a cabo con éxito.</span></p>",
+              "type": "INT"
+            }
+          ]
+        },
+        {
+          "id": "51",
+          "guid": "78d94843-6338-4cf4-bbbf-384a8ba8b0f8",
+          "heading": "Requerimientos Funcionales",
+          "type": "SEC",
+          "children": [
+            {
+              "id": "76",
+              "guid": "01ad2432-c5d4-4ea9-a03d-5e4b6caff054",
+              "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">En este apartado presentamos los requisitos por tipos de usuario</span></p>",
+              "type": "INF"
+            },
+            {
+              "id": "77",
+              "guid": "fb35f0e1-2dd3-4f23-97bb-bc29f66bf7f1",
+              "heading": "Alumno",
+              "type": "SEC",
+              "children": [
+                {
+                  "id": "80",
+                  "guid": "03e59559-98cd-4e64-b1f4-02053ddf08fe",
+                  "heading": "Manejo de la autenticación",
+                  "type": "FR"
+                },
+                {
+                  "id": "81",
+                  "guid": "17244bf7-2c91-489f-a093-7598748abf3d",
+                  "heading": "Registrar paciente",
+                  "type": "FR"
+                },
+                {
+                  "id": "82",
+                  "guid": "2a3c62b0-60ac-4dbd-acb6-a23b832cafc4",
+                  "heading": "Realizar módulo a paciente",
+                  "type": "FR"
+                },
+                {
+                  "id": "83",
+                  "guid": "2fc20be7-4a42-4b06-ade6-84d69ff48e9f",
+                  "heading": "Buscar el expediente médico de un paciente",
+                  "type": "FR"
+                },
+                {
+                  "id": "84",
+                  "guid": "60924379-a39a-4bb7-afc3-5d56dcff200f",
+                  "heading": "Buscar paciente",
+                  "type": "FR"
+                }
+              ]
+            },
+            {
+              "id": "78",
+              "guid": "c0e118b9-e635-4b45-9402-b6d6bd308fcc",
+              "heading": "Profesor",
+              "type": "SEC",
+              "children": [
+                {
+                  "id": "85",
+                  "guid": "7ace7f27-fec0-4194-ae86-51e4c950f015",
+                  "heading": "Manejo de la autenticación",
+                  "type": "FR"
+                },
+                {
+                  "id": "86",
+                  "guid": "bf371f2e-f949-48c6-9eea-39a731942f79",
+                  "heading": "Registrar paciente",
+                  "type": "FR"
+                },
+                {
+                  "id": "87",
+                  "guid": "efaa1aa6-3fe4-45ff-b292-4920b6ab4404",
+                  "heading": "Buscar paciente",
+                  "type": "FR"
+                },
+                {
+                  "id": "88",
+                  "guid": "a3acd275-ec6f-4987-9ad8-71bf5b0b101a",
+                  "heading": "Buscar el expediente médico de un paciente",
+                  "type": "FR"
+                },
+                {
+                  "id": "89",
+                  "guid": "23d40d2a-c698-4f53-b624-ac2247e568d2",
+                  "heading": "Buscar módulos realizados por un alumno",
+                  "type": "FR"
+                },
+                {
+                  "id": "90",
+                  "guid": "a5792e22-7fb8-4ecf-bf74-6e9282209f1c",
+                  "heading": "Calificar módulo",
+                  "type": "FR"
+                }
+              ]
+            },
+            {
+              "id": "79",
+              "guid": "b0f63dd6-08bf-464e-820c-229903e94856",
+              "heading": "Administrador",
+              "type": "SEC",
+              "children": [
+                {
+                  "id": "91",
+                  "guid": "86cf1b0c-6ae5-44ef-906c-5eeb0cdaf302",
+                  "heading": "Manejo de la autenticación",
+                  "type": "FR"
+                },
+                {
+                  "id": "92",
+                  "guid": "40edc249-59c0-4d67-8838-ab4a21937dbc",
+                  "heading": "Dar de alta alumnos y maestros",
+                  "type": "FR"
+                },
+                {
+                  "id": "95",
+                  "guid": "d376d59c-67a1-4894-ac9e-047ee3b1121b",
+                  "heading": "Editar información de usuarios",
+                  "type": "FR"
+                },
+                {
+                  "id": "93",
+                  "guid": "49dd3dc0-e8c2-44af-b4b8-22759a29d317",
+                  "heading": "Eliminar alumnos y maestros",
+                  "type": "FR"
+                },
+                {
+                  "id": "94",
+                  "guid": "36df29f9-7080-49d6-ac72-3719ebadb13a",
+                  "heading": "Modificar formato de expediente médico",
+                  "type": "FR"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "52",
+          "guid": "a82b44f7-1259-4944-ab09-212697042829",
+          "heading": "Requerimientos No Funcionales",
+          "type": "SEC",
+          "children": [
+            {
+              "id": "96",
+              "guid": "b101f5d7-55ab-4154-83c0-c881fdc0e1aa",
+              "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">Debe haber validación de datos en todos los campos al registrar a un paciente.</span></p>",
+              "type": "NFR"
+            },
+            {
+              "id": "97",
+              "guid": "39168637-df06-47ed-80ae-6adacdf571d0",
+              "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">La plataforma implementa el manejo de concurrencia en la modificación de una historia clínica.</span></p>",
+              "type": "NFR"
+            },
+            {
+              "id": "98",
+              "guid": "d3080e60-dafb-465d-9a5b-9e9045b9416f",
+              "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">El sistema debe ser fácil de usar tanto para los alumnos como para los docentes.</span></p>",
+              "type": "NFR"
+            },
+            {
+              "id": "99",
+              "guid": "88d9a03b-0b06-4652-a02f-1199f16d4a33",
+              "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">La interfaz debe ser responsiva, considerando su uso en computadoras de escritorio y tablets.</span></p>",
+              "type": "NFR"
+            },
+            {
+              "id": "100",
+              "guid": "bdb34675-75bb-4efd-8247-796926bc7b87",
+              "heading": "Rendimiento",
+              "type": "SEC",
+              "children": [
+                {
+                  "id": "101",
+                  "guid": "da4b7203-118f-4a0c-8d68-5d095eeebe2a",
+                  "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">La búsqueda de expedientes debe ser rápida.</span></p>",
+                  "type": "NFR"
+                }
+              ]
+            },
+            {
+              "id": "102",
+              "guid": "cd40ef44-31c7-46f7-8c08-0195d6169ad3",
+              "heading": "Seguridad",
+              "type": "SEC",
+              "children": [
+                {
+                  "id": "103",
+                  "guid": "9354892d-2d6b-4c68-bf34-ae5a97747f7e",
+                  "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">El registro de usuarios debe contemplar el uso de correos institucionales.</span></p>",
+                  "type": "NFR"
+                },
+                {
+                  "id": "104",
+                  "guid": "e0931ed4-81cc-45eb-bf7f-48ff993dd7d8",
+                  "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">Los datos de los pacientes deben estar protegidos ya que contienen información confidencial</span></p>",
+                  "type": "NFR"
+                }
+              ]
+            },
+            {
+              "id": "105",
+              "guid": "85b5c0e4-24ab-49ae-893c-db0e89fb8364",
+              "heading": "Confiabilidad",
+              "type": "SEC",
+              "children": [
+                {
+                  "id": "106",
+                  "guid": "19fba4e6-6e45-4435-9d30-cefc68064cfd",
+                  "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">El sistema debe ser tolerante a fallos. Notifica y maneja errores sin interrumpir el resto de las operaciones.&nbsp;</span></p>",
+                  "type": "NFR"
+                },
+                {
+                  "id": "107",
+                  "guid": "15745c0b-330f-4f6f-9ef3-10eb5c80b6aa",
+                  "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">Se deben generar respaldos periódicos de la base de datos para evitar pérdida de información.</span></p>",
+                  "type": "NFR"
+                }
+              ]
+            },
+            {
+              "id": "108",
+              "guid": "6a296cf4-795e-4062-9416-859c8a29623b",
+              "heading": "Escalabilidad",
+              "type": "SEC",
+              "children": [
+                {
+                  "id": "109",
+                  "guid": "24856735-9184-4f46-9c1c-a71d566c4a70",
+                  "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">El sistema debe ser capaz de tolerar el crecimiento de número de usuarios debido a los nuevos estudiantes cada año.</span></p>",
+                  "type": "NFR"
+                },
+                {
+                  "id": "110",
+                  "guid": "d56e2a07-7149-46ce-a41a-cdfbb0780f6d",
+                  "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">El sistema debe poder tolerar cambios en el formato del archivo médico. Esto se puede lograr con un apartado para su modificación</span></p>",
+                  "type": "NFR"
+                },
+                {
+                  "id": "111",
+                  "guid": "25855704-1e2a-4866-9d0d-90adfe70f5b4",
+                  "text": "<p><span style=\"text-decoration:none;vertical-align:baseline;\">Debe contar con una documentación completa y a detalle para el mantenimiento realizado por otros estudiantes colaboradores del proyecto.</span></p>",
+                  "type": "NFR"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "attributes": {
+    "difficulty": {
+      "name": "Difficulty",
+      "type": "enum",
+      "values": [
+        {
+          "key": "E",
+          "label": "Easy"
+        },
+        {
+          "key": "N",
+          "label": "Nominal"
+        },
+        {
+          "key": "D",
+          "label": "Difficult"
+        }
+      ]
+    },
+    "owner": {
+      "name": "Owner",
+      "type": "string"
+    },
+    "priority": {
+      "name": "Priority",
+      "type": "enum",
+      "values": [
+        {
+          "key": "L",
+          "label": "Low"
+        },
+        {
+          "key": "M",
+          "label": "Medium"
+        },
+        {
+          "key": "H",
+          "label": "High"
+        }
+      ]
+    },
+    "rationale": {
+      "name": "Rationale",
+      "type": "xhtml"
+    },
+    "source": {
+      "name": "Source",
+      "type": "string"
+    },
+    "status": {
+      "name": "Status",
+      "type": "enum",
+      "values": [
+        {
+          "key": "Draft"
+        },
+        {
+          "key": "Ready"
+        },
+        {
+          "key": "Reviewed"
+        },
+        {
+          "key": "Approved"
+        },
+        {
+          "key": "Released"
+        }
+      ]
+    },
+    "type": {
+      "name": "Type",
+      "type": "enum",
+      "values": [
+        {
+          "key": "FR",
+          "label": "Functional Requirement"
+        },
+        {
+          "key": "INT",
+          "label": "Interface Requirement"
+        },
+        {
+          "key": "NFR",
+          "label": "Non-func. Requirement"
+        },
+        {
+          "key": "SEC",
+          "label": "Section"
+        },
+        {
+          "key": "INF",
+          "label": "Information"
+        }
+      ]
+    },
+    "verMethod": {
+      "name": "Ver. Method",
+      "type": "enum",
+      "values": [
+        {
+          "key": "T",
+          "label": "Test"
+        },
+        {
+          "key": "D",
+          "label": "Demonstration"
+        },
+        {
+          "key": "I",
+          "label": "Inspection"
+        },
+        {
+          "key": "A",
+          "label": "Analysis"
+        }
+      ]
+    }
+  },
+  "templateColumns": {
+  },
+  "views": {
+    "Primary": {
+      "columns": [
+        {
+          "columnId": "id",
+          "width": 77
+        },
+        {
+          "columnId": "type",
+          "width": 97
+        },
+        {
+          "columnId": "description",
+          "width": 372
+        },
+        {
+          "columnId": "source",
+          "width": 150
+        },
+        {
+          "columnId": "rationale",
+          "width": 150
+        },
+        {
+          "columnId": "priority",
+          "width": 96
+        },
+        {
+          "columnId": "status",
+          "width": 86
+        },
+        {
+          "columnId": "verMethod",
+          "width": 105
+        }
+      ],
+      "default": true
+    }
+  },
+  "metadata": {
+    "format": "2.20"
+  }
+}
