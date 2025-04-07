@@ -1,7 +1,8 @@
 {
   "id": "OdontoLabs",
   "documents": [
-    "SRS.json"
+    "SRS.json",
+    "docanimado.json"
   ],
   "traceability": {
   },

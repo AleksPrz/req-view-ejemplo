@@ -1,0 +1,40 @@
+{
+  "id": "docanimado",
+  "guid": "c870f7f1-4bc5-402b-bad9-19674a697de9",
+  "lastId": 0,
+  "createdOn": "2025-04-07T13:38:27.749Z",
+  "createdBy": {
+    "name": "Alexis Perez",
+    "email": "al064601@uacam.mx",
+    "company": ""
+  },
+  "lastChangedOn": "2025-04-07T13:38:27.749Z",
+  "lastChangedBy": {
+    "name": "Alexis Perez",
+    "email": "al064601@uacam.mx",
+    "company": ""
+  },
+  "data": [],
+  "attributes": {
+  },
+  "templateColumns": {
+  },
+  "views": {
+    "Primary": {
+      "columns": [
+        {
+          "columnId": "id",
+          "width": 65
+        },
+        {
+          "columnId": "description",
+          "width": 500
+        }
+      ],
+      "default": true
+    }
+  },
+  "metadata": {
+    "format": "2.20"
+  }
+}
